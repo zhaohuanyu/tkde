@@ -1,0 +1,21 @@
+We suggest to refer the“libSemiOpt.dll” in eclipse with CDT, and call the function named“semiOpt”. 
+The format is as follows:
+“void semiOpt(string fileName, string resultName, string connectedIndex, string connectedValue, double sigma)”.  For example, 
+//============================================================================
+// Name       : CallDll.cpp
+// Author      : Huanyu Zhao
+// descriptions   : “fileName” is the name of dataset TXT file, “resultName” is the name of compressed results TXT file, 
+“connectedIndex” is the name of TXT file which records the index of semi-connected points, 
+“connectedValue” is the name of TXT file which records the value of semi-connected points and“sigma” is the max-error bound
+//============================================================================
+#include <iostream>
+using namespace std;
+void semiOpt(string fileName, string resultName, string connectedIndex,string connectedValue, double sigma);
+int main() {
+	string strfile="OliveOil";
+	string strresult="result.txt";
+	string strconnect="value.txt";
+	string strindex="index.txt";
+	semiOpt(strfile, strresult, strindex , strconnect, 1.24088);
+	return 1;
+}
