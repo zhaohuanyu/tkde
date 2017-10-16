@@ -1,4 +1,6 @@
-#include "framework.h"
+#include <iostream>
+using namespace std;
+void semiOpt(string fileName, string resultName, string connectedIndex,string connectedValue, double sigma);
 int main() {
 	string strfile="OliveOil";
 	string strresult="result.txt";
@@ -7,4 +9,3 @@ int main() {
 	semiOpt(strfile, strresult, strindex , strconnect, 1.24088);
 	return 1;
 }
-
